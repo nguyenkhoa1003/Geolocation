@@ -10,5 +10,6 @@
     "url": "http://nec.vn"
   },
   "default_locale": "en",
-  "orientation":["portrait","lanscape-secondary"]
+  "orientation":["portrait","lanscape-secondary"],
+  "Content-Type: application/x-web-app-manifest+json"
 }
