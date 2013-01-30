@@ -11,5 +11,5 @@
   },
   "default_locale": "en",
   "orientation":["portrait","lanscape-secondary"],
-  "Content-Type: application/x-web-app-manifest+json"
+  "Content-Type: application/json"
 }
