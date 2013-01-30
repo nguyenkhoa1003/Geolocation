@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html manifest="hellow.manifest">
+  <head>
+    <title>ListAPI</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1>Test APIs</h1>
+    <script>
+    /* Check if application is already installed: https://developer.mozilla.org/en-US/docs/Apps/Getting_Started */
+    var request = navigator.mozApps.getSelf();
+    request.onsuccess = function() {
+      if (request.result) {
+        console.log("Application is installed");
+        $("#installButton").attr('disabled', true);
+        $("#installedStatus").html("already");
+      } else {
+        console.log("Application is _not_ installed");
+        $("#installButton").attr('disabled', false);
+        $("#installedStatus").html("not");
+      }
+    }
+    request.onerror = function() {
+        var errorMessage = 'Error checking installation status: ' + this.error.message;
+        console.log(errorMessage);
+        $("#alertDiv span").html(errorMessage);
+        $("#alertDiv").show();
+    }
+    var myJSONText = JSON.stringify(myObject, replacer);
+    </script>
+    <div class="row">
+        <div class="span10 offset1">
+            <p>Test APIs applications</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span10 offset1">
+		<script>
+		var manifest_url = document.URL +"manifest.webapp";
+		</script>
+            <button id="installButton" class="btn btn-primary" onclick="navigator.mozApps.install(manifest_url); return false;">
+                Install
+            </button><br />
+			<div class="alert" id="alertDiv" style="display: none">
+				<button type="button" class="close" data-dismiss="alert">×</button>
+				<strong>Warning!</strong> <span>error message</span>
+			</div>
+        </div>
+    </div>
+  </body>
+</html>

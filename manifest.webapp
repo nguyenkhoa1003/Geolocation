@@ -1,0 +1,14 @@
+{
+  "name": "Geolocation Demo",
+  "description": "Geolocation Demo",
+  "launch_path": "",
+  "icons": {
+    "128": "/img/icon-128.png"
+  },
+  "developer": {
+    "name": "Khoand, Vietnt",
+    "url": "http://nec.vn"
+  },
+  "default_locale": "en",
+  "orientation":["portrait","lanscape-secondary"]
+}
