@@ -11,5 +11,6 @@
   },
   "default_locale": "en",
   "orientation":["portrait","lanscape-secondary"],
-  "Content-Type: application/json"
+  "Content-Type: application/json",
+  "X-Content-Security-Policy: script-src 'unsafe-inline';"
 }
